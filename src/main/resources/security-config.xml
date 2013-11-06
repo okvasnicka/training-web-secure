@@ -10,7 +10,11 @@
   <!-- 4. Required http element and inner form-login element -->
   <!-- 9. Configure the Access Denied page: access-denied-page="/denied.do" -->
   <http use-expressions="true" access-denied-page="/denied.do">
-    <form-login default-target-url="/" always-use-default-target="true" />
+    <form-login login-page="/login.do" default-target-url="/"
+                always-use-default-target="true"
+                authentication-failure-url="/login.do?login_error=true" />
+
+    <intercept-url pattern="/login*" access="permitAll()" />
 
     <!-- 8. Secure feedback listing page -->
     <intercept-url pattern="/listing*" access="hasAnyRole('ROLE_RIGHT_LIST_OWN', 'ROLE_RIGHT_LIST_ALL')" />
@@ -18,7 +22,7 @@
     <!-- 10. Secure feedback entry page -->
     <intercept-url pattern="/step*" access="hasRole('ROLE_RIGHT_CREATE')" />
 
-    <!-- 6. Make all pages accessible only to authenticated users by default. -->
+    <!-- 6. Make all  pages accessible only to authenticated users by default. -->
     <intercept-url pattern="/**" access="isAuthenticated()" />
 
     <!-- 7. Enable logout -->

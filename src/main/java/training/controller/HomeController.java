@@ -16,6 +16,11 @@ public class HomeController {
   @Autowired
   private TrainingService trainingService;
 
+  @RequestMapping("/login")
+  public String showLogin() {
+    return "login";
+  }
+
   @RequestMapping("/denied")
   public String showAccessDenied() {
     return "denied";
