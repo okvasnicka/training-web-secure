@@ -1,0 +1,29 @@
+h1 {
+  text-decoration: underline;
+}
+
+table {
+  empty-cells: show;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+th, td {
+  text-align: left;
+  padding: 3px 6px;
+}
+
+div.table {
+  display: table
+}
+
+div.row {
+  display: table-row;
+}
+
+div.cell {
+  display: table-cell;
+  padding: 4px 2px;
+}

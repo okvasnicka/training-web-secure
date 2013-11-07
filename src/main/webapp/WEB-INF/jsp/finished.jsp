@@ -5,9 +5,12 @@
 <html>
   <head>
     <title>Finished</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Thank you!</h1>
+    <h1>Training Feedback Webapp</h1>
+
+    <h2>Thank you!</h2>
 
     <p>Your feedback has been successfully sent.</p>
 

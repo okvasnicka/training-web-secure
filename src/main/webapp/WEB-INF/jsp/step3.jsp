@@ -6,15 +6,14 @@
 <html>
   <head>
     <title>Step 3</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Training Course Feedback Form</h1>
+    <h1>Training Feedback Webapp</h1>
 
     <h2>Step 3</h2>
 
-    <p>Please help us to improve our class by completing this form.</p>
-
-    <h2>Summary page</h2>
+    <h3>Summary</h3>
     <dl>
       <dt>Your Name:</dt>
       <dd>${visitorFeedback.visitor.name}</dd>

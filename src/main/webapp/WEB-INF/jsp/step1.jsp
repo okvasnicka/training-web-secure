@@ -5,9 +5,10 @@
 <html>
   <head>
     <title>Step 1</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Training Course Feedback Form</h1>
+    <h1>Training Feedback Webapp</h1>
 
     <h2>Step 1</h2>
 

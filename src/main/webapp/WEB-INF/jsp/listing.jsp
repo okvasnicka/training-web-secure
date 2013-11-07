@@ -6,10 +6,12 @@
 <html>
   <head>
     <title>Submitted feedbacks</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Submitted feedbacks</h1>
+    <h1>Training Feedback Webapp</h1>
+
+    <h2>Submitted feedbacks</h2>
 
     <table>
       <tr>

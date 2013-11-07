@@ -6,10 +6,12 @@
 <html>
   <head>
     <title>Login</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
-    <h1>Training Feedback Webapp Login</h1>
+    <h1>Training Feedback Webapp</h1>
+    <h2>Login</h2>
 
     <c:if test="${!empty param.login_error}">
       <div style="color: red; margin-bottom:1em; font-size:large;"> Incorrect username and/or password </div>
@@ -17,19 +19,19 @@
 
     <div style="float: left">
     <form action="<c:url value='/j_spring_security_check'/>" method="post">
-      <table>
-        <tr>
-          <td>Username:</td>
-          <td><input type="text" id="j_username" name="j_username"/></td>
-        </tr>
-        <tr>
-          <td>Password:</td>
-          <td><input type="password" id="j_password" name="j_password"/></td>
-        </tr>
-        <tr>
-          <td colspan='2'><input id="submit" name="submit" type="submit" value="Login"/></td>
-        </tr>
-      </table>
+      <div class="table">
+        <div class="row">
+          <div class="cell"><label for="j_username">Username:</label></div>
+          <div class="cell"><input type="text" id="j_username" name="j_username"/></div>
+        </div>
+        <div class="row">
+          <div class="cell"><label for="j_password">Password:</label></div>
+          <div class="cell"><input type="password" id="j_password" name="j_password"/></div>
+        </div>
+        <div class="row">
+          <div class="cell"><input id="submit" name="submit" type="submit" value="Login"/></div>
+        </div>
+      </div>
     </form>
     </div>
 
@@ -46,10 +48,10 @@
 
     <script type="text/javascript">
       function loginAs(userName, password) {
-        var userNameField = document.getElementById("j_username")
-        var passwordField = document.getElementById("j_password")
-        userNameField.value = userName
-        passwordField.value = password
+        var userNameField = document.getElementById("j_username");
+        var passwordField = document.getElementById("j_password");
+        userNameField.value = userName;
+        passwordField.value = password;
         document.getElementById('submit').click()
       }
     </script>

@@ -16,10 +16,10 @@ public class TrainingCourse {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   @Column(name = "TRAINING_COURSE_ID")
-  Long id;
+  private Long id;
 
   @Column(name = "NAME", nullable = false)
-  String name;
+  private String name;
 
   @OneToMany(mappedBy = "course")
   private List<TrainingCourseSection> sections;

@@ -14,10 +14,10 @@ public class Visitor {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   @Column(name = "VISITOR_ID")
-  Long id;
+  private Long id;
 
   @Column(name = "NAME", nullable = false)
-  String name;
+  private String name;
 
   public Long getId() {
     return id;

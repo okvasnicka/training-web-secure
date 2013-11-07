@@ -6,9 +6,12 @@
 <html>
   <head>
     <title>Index</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Feedback wanted</h1>
+    <h1>Training Feedback Webapp</h1>
+
+    <h2>Main page</h2>
 
     <!-- 10. secure the link based on associated URL -->
     <sec:authorize url="/step1.do">
