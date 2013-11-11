@@ -16,11 +16,12 @@ public interface TrainingService {
 
   void saveTrainingCourseFeedback(TrainingCourseFeedback feedback);
 
-  // 11. Listing only feedback records that the current user is allowed to view
+  // DONE 11: Listing only feedback records that the current user is allowed to view
   @PostFilter("hasPermission(filterObject, 'list')")
   List<TrainingCourseFeedback> loadAllFeedbacks();
 
-  // 12. Method-level security for feedback record deletion
+  // DONE 12: Method-level security for feedback record deletion
+  // (users can delete only if they have the required permission)
   @PreAuthorize("hasPermission(#feedback, 'delete')")
   void deleteFeedback(TrainingCourseFeedback feedback);
 

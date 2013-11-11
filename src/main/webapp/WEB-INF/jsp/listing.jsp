@@ -42,6 +42,7 @@
         </spring:url>
 
         <td>
+          <%-- DONE 14: Show/hide the Delete link based on the "deletable" property --%>
           <c:if test="${feedback.deletable}">
           <a href="${deleteUrl}">Delete</a>
           </c:if>

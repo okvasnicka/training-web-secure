@@ -57,6 +57,7 @@
     <property name="visitorDAO" ref="visitorDAO" />
   </bean>
 
+  <!-- DONE 03: (DONE ALREADY) Import Spring Security config -->
   <import resource="classpath:security-config.xml" />
 
 </beans>

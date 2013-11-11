@@ -150,7 +150,7 @@
       <version>1.4.0</version>
     </dependency>
 
-    <!-- 1. Spring Security dependencies -->
+    <!-- DONE 01: (DONE ALREADY) Spring Security dependencies -->
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-web</artifactId>
@@ -167,7 +167,7 @@
       <version>${spring.security.version}</version>
     </dependency>
 
-    <!-- 13. AspectJ dependencies -->
+    <!-- DONE 13: (DONE ALREADY) AspectJ dependencies -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-aop</artifactId>

@@ -18,7 +18,8 @@
       <dl>
         <dt><span style="color: red;">*</span> Your Name:</dt>
         <dd>
-          <form:input path="visitor.name" disabled="true" />
+          <%-- DONE 10: Disable the username input field since it is pre-populated from security context --%>
+          <form:input path="visitor.name" /> <%--disabled="true"--%>
           <form:errors path="visitor.name" />
         </dd>
 

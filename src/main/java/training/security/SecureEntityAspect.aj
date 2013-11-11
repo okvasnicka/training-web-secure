@@ -2,10 +2,11 @@ package training.security;
 
 import javax.persistence.Transient;
 
+// DONE 13: Default SecureEntity implementation mixin
+// (makes TrainingCourseFeedback contain the default implementation of SecureEntity interface)
+
 public aspect SecureEntityAspect {
 
-  // no need for entity classes to implement SecureEntity explicitly, this
-  // line will do it from here
   declare parents : training.model.TrainingCourseFeedback implements SecureEntity;
 
   @Transient

@@ -16,6 +16,7 @@ public abstract class BaseWizardController {
     TrainingCourseFeedback feedback = new TrainingCourseFeedback();
 
     Visitor visitor = new Visitor();
+    // DONE 10: Pre-populate user name from current security context
     visitor.setName(SecurityContextHolder.getContext().getAuthentication().getName());
 
     feedback.setVisitor(visitor);

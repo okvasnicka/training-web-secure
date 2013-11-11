@@ -11,11 +11,11 @@
     <param-value>classpath:applicationContext.xml</param-value>
   </context-param>
 
+  <!-- DONE 02: Enable Spring Security filter chain -->
   <filter>
     <filter-name>springSecurityFilterChain</filter-name>
     <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
   </filter>
-
   <filter-mapping>
     <filter-name>springSecurityFilterChain</filter-name>
     <url-pattern>/*</url-pattern>

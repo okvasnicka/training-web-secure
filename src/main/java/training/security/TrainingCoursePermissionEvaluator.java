@@ -7,6 +7,14 @@ import org.springframework.security.core.GrantedAuthority;
 
 import java.io.Serializable;
 
+/**
+ * Allows to check for 'delete' and 'list' permission on
+ * TrainingCourseFeedback objects.
+ *
+ * 'delete' - determines whether current user can delete given feedback record
+ * 'list' - determines whether current user can list (view) given feedback record
+ *
+ */
 public class TrainingCoursePermissionEvaluator implements PermissionEvaluator {
 
   @Override
@@ -15,6 +23,8 @@ public class TrainingCoursePermissionEvaluator implements PermissionEvaluator {
       TrainingCourseFeedback feedback = (TrainingCourseFeedback) target;
 
       if (permission.equals("list")) {
+        // DONE 13: Set deletable property when retrieving feedback records for listing
+        // (so that Delete link can be displayed or hidden on JSP page)
         feedback.setDeletable(canDelete(authentication, feedback));
         return canList(authentication, feedback);
       } else if (permission.equals("delete")) {

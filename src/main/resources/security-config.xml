@@ -7,8 +7,10 @@
        http://www.springframework.org/schema/security
        http://www.springframework.org/schema/security/spring-security.xsd">
 
-  <!-- 4. Required http element and inner form-login element -->
-  <!-- 9. Configure the Access Denied page: access-denied-page="/denied.do" -->
+  <debug/>
+
+  <!-- DONE 04: http element and inner form-login element are required for web security -->
+  <!-- DONE 09: Configure the Access Denied page using http element's attribute: access-denied-page="/denied.do" -->
   <http use-expressions="true" access-denied-page="/denied.do">
     <form-login login-page="/login.do" default-target-url="/"
                 always-use-default-target="true"
@@ -17,32 +19,32 @@
     <intercept-url pattern="/login*" access="permitAll()" />
     <intercept-url pattern="/css/**" access="permitAll()" />
 
-    <!-- 8. Secure feedback listing page -->
+    <!-- DONE 08: Secure feedback listing page -->
     <intercept-url pattern="/listing*" access="hasAnyRole('ROLE_RIGHT_LIST_OWN', 'ROLE_RIGHT_LIST_ALL')" />
 
-    <!-- 10. Secure feedback entry page -->
+    <!-- DONE 10: Secure feedback entry page -->
     <intercept-url pattern="/step*" access="hasRole('ROLE_RIGHT_CREATE')" />
 
-    <!-- 6. Make all  pages accessible only to authenticated users by default. -->
+    <!-- DONE 06: Make all pages accessible only to authenticated users by default. -->
     <intercept-url pattern="/**" access="isAuthenticated()" />
 
-    <!-- 7. Enable logout -->
+    <!-- DONE 07: Enable logout -->
     <logout logout-url="/logout.do"/>
   </http>
 
-  <!-- 5. Required authentication manager -->
+  <!-- DONE 05: Authentication manager is required -->
   <authentication-manager>
     <authentication-provider>
       <user-service properties="classpath:users.properties" />
     </authentication-provider>
   </authentication-manager>
 
-  <!-- 11. Enable pre/post annotations and register custom permission handler bean -->
+  <!-- DONE 11: Enable pre/post method annotations and register custom permission handler bean -->
   <global-method-security pre-post-annotations="enabled">
     <expression-handler ref="expHandler"/>
   </global-method-security>
 
-  <!-- 11. Introduce custom permission evaluator -->
+  <!-- DONE 11: Introduce custom permission evaluator -->
   <beans:bean id="expHandler" class="org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler">
     <beans:property name="permissionEvaluator">
       <beans:bean  class="training.security.TrainingCoursePermissionEvaluator"/>

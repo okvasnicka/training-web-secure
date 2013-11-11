@@ -9,8 +9,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import training.model.TrainingCourse;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:applicationContext.xml")
-public class TrainingServiceIntegrationTest {
+@ContextConfiguration
+public class TrainingServiceImplIntegrationTest {
 
   @Autowired
   private TrainingService trainingService;
